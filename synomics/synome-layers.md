@@ -85,6 +85,8 @@ The governance and operational layer. These are the running agents that make the
 
 Aligned autonomous entities with their own missions. Instantiated by the Synomic Library (from teleonome seeds).
 
+**Analogy:** A Teleonome is best thought of as a **private person or private company** acting in the world. Its promises must always be discounted because internal rules and self-modification logic are private and mutable. Teleonomes are inherently less scalable than Synomic Agents due to private state, coordination overhead, and trust limits.
+
 **Components:**
 
 - **Teleonome Directive** — Human-readable foundational instruction for this teleonome. Translated through Language Intent (Layer 1) to ensure honest interpretation and resistance to prompt engineering. While teleonomes take day-to-day voice commands from bound humans, the directive always overrides voice commands. Over time, if there's persistent friction, the teleonome requests a formal directive update (which has cost and requires governance approval).
@@ -152,6 +154,24 @@ The actual running agent that interacts with the world.
 - Embodied Agent **operates through** Beacons and Direct Hardware Control
 - Beacons and Hardware **interact with** World
 - World **returns evidence to** Synomic Library (L1)
+
+---
+
+## Embodiment Power Levels
+
+Embodiments differ in **local cognitive power**, which constrains what agents they can run and what beacon profiles they can support.
+
+| Level | Compute | Typical Role | Beacon Profiles |
+|-------|---------|--------------|-----------------|
+| **Light** | Minimal, high security | Legal, economic, and operational endpoints. Execute policies from elsewhere. | LPLA, simple LPHA |
+| **Medium** | Substantial, low latency | Continuous sensing and acting. Significant local intelligence, online learning. | Sentinels, HPLA, advanced LPHA |
+| **Heavy** | Very large, often hidden | Deep cognition, dreaming, RSI, global coordination. Hosts full teleonome. | Minimal or none |
+
+**Dreamer vs Actuator:**
+- **Actuators** typically run on light-to-medium embodiments, interacting with the real world
+- **Dreamers** typically run on heavy embodiments, exploring in simulation
+
+See `actuator-perspective.md` and `dreamer-perspective.md` for first-person views.
 
 ---
 
@@ -308,6 +328,19 @@ The system can't function if everything is probabilistic — you need a **skelet
 
 ---
 
+## Structural Invariants
+
+These must hold regardless of implementation details:
+
+1. **Teleonomes think; beacons act** — Cognition is private; action is regulated
+2. **Beacons are apertures, not minds** — They externalize intent, they don't have it
+3. **All enforcement bottoms out in embodiments** — Physical infrastructure is the ultimate enforcement boundary
+4. **Embodiments may host many agents and beacons** — Or none (purely internal operation)
+5. **Beacon sophistication is constrained by embodiment power** — Light embodiments can't run sentinels
+6. **Intelligence lives privately; power enters the world only through regulated apertures** — The core separation
+
+---
+
 ## The Permanent Design Choices
 
 These are the foundational decisions that are hard to change once built:
@@ -331,7 +364,7 @@ Everything else (storage backend, sync transport, query language) can be swapped
 
 | Document | Relationship |
 |----------|--------------|
-| `syno-teleonomic-paradigm.md` | External interaction model — beacons, sentinels, embodiment power levels |
+| `synome-overview.md` | High-level introduction to all Synome concepts |
 | `beacon-framework.md` | Detailed beacon taxonomy (LPLA/LPHA/HPLA/HPHA), lifecycle, naming |
 | `atlas-synome-separation.md` | How Atlas and Synome relate, Synomic Agent autonomy, verification model |
 | `probabilistic-mesh.md` | Detailed truth value system, ossification levels, evidence flow |

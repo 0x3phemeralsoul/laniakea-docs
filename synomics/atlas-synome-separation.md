@@ -223,6 +223,8 @@ The Atlas is embedded IN the Synome, not separate from it. It's the human-interp
 
 The Synome structure enables a crucial property: **Synomic Agents can be fully autonomous**.
 
+**Analogy:** Synomic Agents correspond to **regulated businesses or joint-stock companies** — conservative, auditable, and designed to scale trustlessly. They are highly scalable because cooperation naturally converges on them as institutional shells.
+
 ### What Makes This Possible
 
 A Synomic Agent (Prime, Halo, Generator) exists entirely within the Synome:
@@ -585,7 +587,7 @@ The Atlas becomes the human-interpretable window into an arbitrarily complex mac
 | Document | Relationship |
 |----------|--------------|
 | `synome-layers.md` | The 5-layer architecture and artifact hierarchy (synart, telart, embart) |
-| `syno-teleonomic-paradigm.md` | External interaction model — how Synomic Agents operate through beacons |
+| `synome-overview.md` | High-level introduction to all Synome concepts |
 | `beacon-framework.md` | How beacons derive authority envelopes from governance |
 | `probabilistic-mesh.md` | The soft knowledge layer that informs governance decisions |
 | `short-term-actuators.md` | Phase 1 beacon implementation — teleonome-less beacons interacting with Synome-MVP |

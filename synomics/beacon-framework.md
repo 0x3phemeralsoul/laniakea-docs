@@ -198,6 +198,38 @@ High Authority beacons act on behalf of Synomic Agents — the institutional str
 
 **Sentinels** are a distinguished subclass of HPHA beacons. Due to their control bandwidth, speed, and systemic importance, they receive dedicated treatment. Both Primes and Halos can have sentinel formations — any Synomic Agent with a PAU can be sentinel-operated. See `sentinel-network.md` for full specification.
 
+#### Sentinel Formations
+
+Sentinels do not operate as single agents, but as **coordinated formations** composed of multiple embodied agents (EMAs):
+
+| Formation | Role | Authority |
+|-----------|------|-----------|
+| **Baseline Sentinel** | Primary decision-making and execution surface. Runs the real-time strategy loop, moves capital or state continuously. | Direct execution |
+| **Stream Sentinel** | Continuous data ingestion and sensing. Feature extraction and signal generation. Feeds the baseline sentinel. | No direct execution |
+| **Warden Sentinel(s)** | Independent monitoring and risk enforcement. Can freeze, halt, or escalate. Enforces hard invariants; does not optimize. | Override/halt only |
+
+This separation mirrors **data plane / control plane / safety plane** architectures.
+
+#### Why Sentinels Are Special
+
+Although other HPHA beacons exist (e.g., governance beacons), sentinels are uniquely powerful because they:
+- Operate **continuously and in real time**
+- Act faster than synomic governance processes
+- Concentrate institutional authority and local intelligence
+- Create immediate external effects that governance audits asynchronously
+
+Even governance beacons remain process-gated and asynchronous; sentinels are **operationally dominant**.
+
+#### Streams and Compounding
+
+A **stream** is a continuously operating sentinel formation that deploys public (synomic) capital. Streams generate outperformance relative to benchmarks, from which the operating Teleonome earns **private carry**.
+
+That carry may be reinvested into **proprietary AGI capabilities** (compute, models, data, embodiments) without leaking intelligence to competitors. This creates the fastest known compounding loop:
+
+> public capital → private intelligence → better streams → more carry → more intelligence
+
+This loop explains why operating streams is the **highest-leverage activity** available to a Teleonome, while remaining safe due to synomic constraints, wardens, and revocability.
+
 **HPHA Governance Examples:**
 
 | Beacon | Synomic Agent | Function |
@@ -363,7 +395,7 @@ This mirrors corporate structures: subsidiaries, SPVs, and intelligence cut-outs
 | `atlas-synome-separation.md` | How beacon authority envelopes derive from governance |
 | `short-term-actuators.md` | Phase 1 teleonome-less beacon implementation and evolution pathway |
 | `actuator-perspective.md` | First-person view of an actuator operating beacons |
-| `syno-teleonomic-paradigm.md` | The 5-layer architecture that beacons operate within |
+| `synome-overview.md` | The 5-layer architecture that beacons operate within |
 | Configurator Unit spec | BEAM hierarchy (aBEAM, cBEAM, pBEAM) for High Authority beacons |
 
 ---
